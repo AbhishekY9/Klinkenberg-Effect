@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+kl=int(input("Write your initial gauss for Kl value: "))
+n=int(input("Total number of iteration need to perform: "))
+k_plot=[]
+
+# f(x) = 6.9kL^(0.64) + pmkL- pm*kg
+# f'(x) = 4.416(kl)*(-0.36)+2.152
+# Given Pm = 2.152 psi & kg= 46.6 mD
+for i in range(n):
+  kl=kl - (6.9*(kl)**0.64+2.152*kl-2.152*46.6)/(4.416*(kl)**(-0.36)+2.152)
+  k_plot.append(kl)
+print(f'Value of absolute permeability is {kl}')
+plt.plot(k_plot)
+plt.axhline(23.66,color='green')

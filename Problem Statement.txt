@@ -1,0 +1,18 @@
+Klinkenberg Effect:
+Klinkenberg Effect can be used to calculate the absolute permeability when only one gas permeability measurement (kg) of a core sample is made at pm. 
+ 
+6.9*kL^(0.64) + pm*kL- pm*kg = 0
+
+This nonlinear equation can be solved iteratively by using the **Newton-Raphson** iterative methods. The proposed solution method can be conveniently written as:
+
+Ki+1=ki-f(x)/f'(x)
+
+Above equation  can be written as,
+
+f(x) = 6.9*kL^(0.64) + pm*kL- pm*kg
+
+f'(x) = 4.416*(kl)**(-0.36)+2.152
+
+Example 4-10 (Tarek Ahmed)
+
+The permeability of a core plug is measured by air. Only one measure ment is made at a mean pressure of 2.152 psi. The air permeability is 46.6 md. Estimate the absolute permeability of the core sample. Compare the result with the actual absolute permeability of 23.66 md.
